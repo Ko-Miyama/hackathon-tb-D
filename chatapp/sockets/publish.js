@@ -2,8 +2,9 @@
 
 module.exports = function (socket, io) {
     // 投稿メッセージを送信する
-    socket.on('sendMessage', function (data) {
-        io.sockets.emit('receiveMessage',data);
+    socket.on('sendMessageEvent', function (data) {
+        io.sockets.emit('recieveMessage',data)
+
     });
 };
 
