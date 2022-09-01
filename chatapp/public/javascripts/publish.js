@@ -7,6 +7,7 @@ function publish() {
     // 入力されたメッセージを取得
     const message = $('#message').val();
 
+
     const NamemMessage=[userName,message]
     
     // 投稿内容を送信
@@ -18,6 +19,7 @@ function publish() {
 // サーバから受信した投稿メッセージを画面上に表示する
 
 socket.on('recieveMessage', function (data) {
+
     $('#thread').prepend('<p>' +  data[0]+'さん: '+data[1]+ '</p>');
 
 });
