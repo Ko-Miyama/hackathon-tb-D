@@ -71,8 +71,62 @@ div {
 }
 
 .room-thread {
-
+    
 }
+
+#publish {
+    max-width:500px; /*最大幅は任意*/
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 17px 13px 15px 18px;
+    border-radius: 12px;
+    background: #99dddd;/*色は任意*/
+    box-sizing:border-box;
+    margin:0 !important;
+    line-height:1.5;
+}
+
+#memo {
+    max-width:500px; /*最大幅は任意*/
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 17px 13px 15px 18px;
+    border-radius: 12px;
+    background: #d299dd;/*色は任意*/
+    box-sizing:border-box;
+    margin:0 !important;
+    line-height:1.5;
+}
+
+#exit {
+    max-width:500px; /*最大幅は任意*/
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 17px 13px 15px 18px;
+    border-radius: 12px;
+    background: #dbdd99;/*色は任意*/
+    box-sizing:border-box;
+    margin:0 !important;
+    line-height:1.5;
+}
+
+#enter {
+    max-width:500px; /*最大幅は任意*/
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 17px 13px 15px 18px;
+    border-radius: 12px;
+    background: #ddab99;/*色は任意*/
+    box-sizing:border-box;
+    margin:0 !important;
+    line-height:1.5;
+}
+
+
 
 .room-exit {
 

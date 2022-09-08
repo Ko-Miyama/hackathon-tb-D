@@ -17,7 +17,7 @@ socket.on('enterOtherEvent', function (data) {
 function sendMessage() {
     const message = prompt('メッセージを入力してください。\n' +
                     'このメッセージはすべてのクライアントに送信されます。');
-
+    //メッセージ入力イベント（sendMessageEvent）を送信する
     socket.emit('sendMessageEvent',message);
 
 }
