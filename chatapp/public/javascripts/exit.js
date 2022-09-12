@@ -14,3 +14,10 @@ function exit() {
 socket.on('receiveExitEvent', function (data) {
     $('#thread').prepend('<p class="threadd center notail">' + data + 'さんが退出しました。</p>');
 });
+
+socket.on('exitEvent', function (data) {
+    $('.login-user').remove();
+    for (const user of data) {
+        $('#login-users').append('<h6 class="login-user">' + user + '</h6>');
+    }
+});
