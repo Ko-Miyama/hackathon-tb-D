@@ -12,3 +12,10 @@ socket.emit('enterMyselfEvent', userName);
 socket.on('sendEnterMyselfEvent', function (data) {
     $('#thread').prepend('<p class="threadd center notail">' + data + 'さんが入室しました。</p>');
 });
+
+socket.on('enterEvent', function (data) {
+    $('.login-user').remove();
+    for (const user of data) {
+        $('#login-users').append('<h6 class="login-user">' + user + '</h6>');
+    }
+})
