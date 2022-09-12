@@ -15,12 +15,6 @@ function publish() {
         socket.emit('sendMessageEvent',NamemMessage);
     }
 
-
-    //const NamemMessage=[userName,message]
-    
-    // 投稿内容を送信
-    //socket.emit('sendMessageEvent',NamemMessage)
-
     return false;
 }
 
@@ -33,10 +27,13 @@ socket.on('recieveMessage', function (data) {
     const date = now.getDate();
     const hour = now.getHours();
     const min = now.getMinutes();
-
-    //$('#thread').prepend('<p>' +data[0]+'さん'+ '<br>' + data[1] + '<br>' + '投稿日時('+year+'/'+month+'/'+date+'/'+hour+':'+min+')' + '</p>');
-    $('#thread').prepend('<p>' +  data[0]+'さん:' +'</p>');
-    $('#thread').prepend('<p id=publish>' +data[1] + '　　投稿日時('+year+'/'+month+'/'+date+'/'+hour+':'+min+')' + '</p>');
-    //$('#thread').prepend('<p>' +  data[0]+'さん: '+data[1]+'</p>');
+    
+    // 現在入出しているユーザー名を所得
+    const userName = $('#userName').val();
+    if(data[0] === userName){
+        $('#thread').prepend('<p class="threadd right">' + data[0]+ 'さん:' +'<br>' + data[1] + '<br>' + '('+year+'/'+month+'/'+date+'/'+hour+':'+min+')' + '</p>');
+    }else{
+        $('#thread').prepend('<p class="threadd left">' + data[0]+ 'さん:' + '<br>' +data[1] + '<br>' + '('+year+'/'+month+'/'+date+'/'+hour+':'+min+')' + '</p>');
+    }
 
 });

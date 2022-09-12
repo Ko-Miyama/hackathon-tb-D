@@ -11,12 +11,8 @@ function memo() {
     if(message.length === 0 || !message.match(/\S/g)){
         alert("メモを入力してください。");
     }else{
-        $('#thread').prepend('<p>' +userName+'さんのメモ'+ '</p>');
-        $('#thread').prepend('<p id=memo>' +userName+'さんのメモ：'+ message +'</p>');
+        $('#thread').prepend('<p class="threadd right notail">' + 'メモ：' + '<br>' + message + '</p>');
     }
-
-    //$('#thread').prepend('<p>' +userName+'さんのメモ：'+ message +'</p>');
-
 
     return false;
 }
