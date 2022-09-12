@@ -5,9 +5,11 @@ function publish() {
     // ユーザ名を取得
     const userName = $('#userName').val();
     // 入力されたメッセージを取得
-    const message = $('#message').val();
+    let message = $('#message').val();
+    message = message.replace("\n", "<br>");
     
-    if(message.length === 0 || !message.match(/\S/g)){
+    if(message.length ===
+         0 || !message.match(/\S/g)){
         alert("投稿文を入力してください。");
     }else{
         const NamemMessage=[userName,message];
