@@ -15,6 +15,8 @@ function publish() {
         const NamemMessage=[userName,message];
         // 投稿内容を送信
         socket.emit('sendMessageEvent',NamemMessage);
+        // 送信後textareaからメッセージを削除
+        $('#message').val('');
     }
 
     return false;

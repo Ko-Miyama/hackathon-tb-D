@@ -12,6 +12,8 @@ function memo() {
         alert("メモを入力してください。");
     }else{
         $('#thread').prepend('<p class="threadd right notail">' + 'メモ：' + '<br>' + message + '</p>');
+        // 送信後textareaからメッセージを削除
+        $('#message').val('');
     }
 
     return false;
