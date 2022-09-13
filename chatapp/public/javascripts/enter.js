@@ -18,4 +18,4 @@ socket.on('enterEvent', function (data) {
     for (const user of data) {
         $('#login-users').append('<h6 class="login-user">' + user + '</h6>');
     }
-})
+});

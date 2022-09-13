@@ -5,9 +5,6 @@ module.exports = function (socket, io) {
     socket.on('enterMyselfEvent', function (data) {
         // console.log("data = " + data);
         socket.broadcast.emit('sendEnterMyselfEvent', data);
-        if (!io.hasOwnProperty("login_users")) {
-            io.login_users = [];
-        }
         io.login_users.push(data);
         io.sockets.emit('enterEvent', io.login_users);
     });

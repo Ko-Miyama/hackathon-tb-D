@@ -14,5 +14,8 @@ module.exports = function (server) {
 
         // 退室モジュールの呼出
         require('./exit')(socket, io);
+
+        // 名前被ってないか確認するモジュールの呼出
+        require('./confirm')(socket, io);
     });
 };
