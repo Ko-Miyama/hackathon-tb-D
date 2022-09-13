@@ -6,18 +6,19 @@ function exit() {
     const userName = $('#userName').val();
     // 退室メッセージイベントを送信する
     socket.emit('sendExitEvent', userName);
-    // 退室
-    location.href = '/';
 }
 
-// サーバから受信した退室メッセージを画面上に表示する
-socket.on('receiveExitEvent', function (data) {
-    $('#thread').prepend('<p class="threadd center notail">' + data + 'さんが退出しました。</p>');
-});
-
-socket.on('exitEvent', function (data) {
+// 退出者以外が受け取る信号
+socket.on('receiveAnotherExitEvent', function (data) {
+    $('#thread').prepend('<p class="threadd center notail">' + data[0] + 'さんが退出しました。</p>');
     $('.login-user').remove();
-    for (const user of data) {
+    for (const user of data[1]) {
         $('#login-users').append('<h6 class="login-user">' + user + '</h6>');
     }
+});
+
+// 退出者が受け取る信号
+socket.on('receiveMyExitEvent', function () {
+    // 退室
+    location.href = '/';
 });
