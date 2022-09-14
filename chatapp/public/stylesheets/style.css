@@ -13,17 +13,20 @@ div {
     margin: 20px 0px;
     
 }
-
+/*
 .row {
-    /*margin: 20px;*/
-    
-    /*画面の中央に表示*/
     display: flex;
     justify-content: center;
     align-items: center;
 
-}
+    padding: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+    border: 1px solid #333;
+    background: #ffffff;
 
+}
+*/
 /*
  * ボタンの共通設定
  */
@@ -34,12 +37,52 @@ div {
 /*
  * トップ画面（index.hbs）に関する設定
  */
+.container1{
+    padding: 20px;
+    /*
+    margin-right: 350px;
+    margin-left: 350px;
+    margin-top: 50px;
+    */
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 5%;
+    border: 1px solid #333;
+    background: #ffffff;
+}
+
+.row1 {
+
+    /*画面の中央に表示*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headline1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-right:20%;
+    margin-left: 20%;
+
+    border-radius: 50% 20% / 10% 40%;
+    padding: 15px;
+    background: #74cedb;
+    color: white;
+
+}
+
 .index-user_name {
 
 }
 
 .index-user_name_text {
-    width: 200px;
+    width: 350px;
+    height: 40px;
+    
 }
 
 .index-enter {
@@ -47,12 +90,34 @@ div {
 }
 
 .index-enter_button {
-
+    width: 350px;
+    height: 40px;
+    
 }
 
 /*
  * チャットルーム画面（room.hbs）に関する設定
  */
+ .row {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    
+    margin-right: 15%;
+    margin-left: 15%;
+    
+    /*
+    margin-right: auto;
+    margin-left: auto;
+    */
+    border: 2px solid rgb(0, 0, 0);
+    background: #ffffff;
+
+}
+
 .headline{
     display: flex;
     justify-content: center;
@@ -61,6 +126,14 @@ div {
 
     border-radius: 50% 20% / 10% 40%;
     padding: 20px;
+    
+    margin-right: 100px;
+    margin-left: 100px;
+    
+    /*
+    margin-right: auto;
+    margin-left: auto;
+    */
     background: #74cedb;
     color: white;
 
@@ -107,6 +180,7 @@ div {
 
 .room-exit_button {
 	width: 500px;
+    height: 40px;
 }
 
 .room.thread {
