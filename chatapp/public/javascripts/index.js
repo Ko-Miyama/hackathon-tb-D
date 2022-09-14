@@ -15,6 +15,7 @@ function enter() {
     //userName == "" ? alert("ユーザ名を入力してください。") : $('form').submit();
 }
 
+// チャットルームに入室するための段階2 --> ユーザ名に重複がない場合に帰ってくる信号
 socket.on('OK', function () {
     $('form').submit();
 });
@@ -24,5 +25,3 @@ socket.on('NO', function (data) {
     $('.errorMessage').remove();
     $('#sameNameError').append('<p class="errorMessage">既にユーザ名："' + data + '"が存在するので、別の名前でログインして下さい</p>');
 });
-
-
