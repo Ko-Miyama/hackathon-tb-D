@@ -16,6 +16,6 @@ socket.on('sendEnterMyselfEvent', function (data) {
 socket.on('enterEvent', function (data) {
     $('.login-user').remove();
     for (const user of data) {
-        $('#login-users').append('<h6 class="login-user">' + user + '</h6>');
+        $('#login-users').append('<h6 class="login-user">・' + user + 'さん</h6>');
     }
 });

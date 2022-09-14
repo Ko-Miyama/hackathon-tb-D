@@ -95,6 +95,11 @@ div {
     
 }
 
+/*名前が重複した時に現れるエラー文を赤色に...*/
+.errorMessage {
+    color: red;
+}
+
 /*
  * チャットルーム画面（room.hbs）に関する設定
  */
@@ -268,6 +273,10 @@ div {
     content: none;
 }
 
-.errorMessage {
-    color: red;
+/*ログインユーザ一覧の枠を作る、人数に合わせて枠の大きさが変わる*/
+#login-users {
+    width: 100%;
+    border: 1px solid #3ca1ff;
+    border-radius: 10px;
+    background-color: rgba(221, 221, 221, 0.5);
 }
